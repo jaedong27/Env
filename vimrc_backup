@@ -1,4 +1,4 @@
-""""""""""""""""""""""""""
+"""""""""""""""""""""""""""
 " Vundle
 """""""""""""""""""""""""""
 "set rtp+=~/.vim/bundle/Vundle.vim
@@ -20,13 +20,13 @@ call plug#begin('~/.vim/plugged')
 "    Plugin 'scrooloose/syntastic' "code syntax check
 " Plugin 'vim-ruby/vim-ruby'
     Plug 'ervandew/supertab'    "show same bracket
-    Plug 'severin-lemaignan/vim-minimap'
+"    Plugin 'severin-lemaignan/vim-minimap'
     Plug 'djoshea/vim-autoread' "reload file when the file is changed
     Plug 'slim-template/vim-slim'
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'benmills/vimux'
 
-    Plug 'Valloric/YouCompleteMe'  
+"    Plug 'Valloric/YouCompleteMe'  
 call plug#end()
 
 ""Plugin 'jiangmiao/auto-pairs'
@@ -218,47 +218,48 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 """"""""""""""""""""""""""
 
 " Browse airline tabs
-:nnoremap <C-u> :bprevious<CR>
-:nnoremap <C-i> :bnext<CR>
+:nnoremap <C-p> :bnext<CR>
+:nnoremap <C-o> :bprevious<CR>
 
 " Map Control S for save
-" noremap <silent> <C-S> :update<CR>
-" vnoremap <silent> <C-S> <C-C>:update<CR>
-" inoremap <silent> <C-S>  <C-O>:update<CR>
+noremap <silent> <C-S> :update<CR>
+vnoremap <silent> <C-S> <C-C>:update<CR>
+inoremap <silent> <C-S>  <C-O>:update<CR>
 
 " Comment block
-vnoremap <silent> <C-n> :Commentary<cr>
+vnoremap <silent> <C-k> :Commentary<cr>
 
 " Close current buffer
 noremap <silent> <C-q> :Bclose!<CR>
 
 " Toggle Nerdtree
-noremap <silent> <C-o> ::NERDTreeToggle<CR>
+"noremap <silent> <C-f> ::NERDTreeToggle<CR>
+noremap <silent> <F11> ::NERDTreeToggle<CR>
 
 " Select all
-" map <C-a> <esc>ggVG<CR>
+map <C-a> <esc>ggVG<CR>
 
 " https://blog.bugsnag.com/tmux-and-vim/#related-reading
 " Add Vertical Mode
 " vv to generate new vertical split
-"nnoremap <silent> vv <C-w>v
+nnoremap <silent> vv <C-w>v
 
-"" Prompt for a command to run
-"map <Leader>vp :VimuxPromptCommand<CR>
-"noremap <silent> <F7> :VimuxPromptCommand<CR>
+" Prompt for a command to run
+map <Leader>vp :VimuxPromptCommand<CR>
+noremap <silent> <F7> :VimuxPromptCommand<CR>
 
-"" Run last command executed by VimuxRunCommand
-"map <Leader>vl :VimuxRunLastCommand<CR>
-""noremap <silent> <F7> :VimuxRunLastCommand<CR>
+" Run last command executed by VimuxRunCommand
+map <Leader>vl :VimuxRunLastCommand<CR>
+"noremap <silent> <F7> :VimuxRunLastCommand<CR>
 
-"" Inspect runner pane
-"map <Leader>vi :VimuxInspectRunner<CR>
+" Inspect runner pane
+map <Leader>vi :VimuxInspectRunner<CR>
 
-"" Zoom the tmux runner pane
-"map <Leader>vz :VimuxZoomRunner<CR>
-""noremap <silent> <F5> :VimuxZoomRunner<CR>
+" Zoom the tmux runner pane
+map <Leader>vz :VimuxZoomRunner<CR>
+"noremap <silent> <F5> :VimuxZoomRunner<CR>
 
-"" Close vim tmux runner opend by VimuxRuncommand
-"map <Leader>vq :VimuxCloseRunner<CR>
-""noremap <silent> <F8> :VimuxCloseRunner<CR>
+" Close vim tmux runner opend by VimuxRuncommand
+map <Leader>vq :VimuxCloseRunner<CR>
+"noremap <silent> <F8> :VimuxCloseRunner<CR>
 
